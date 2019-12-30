@@ -1,0 +1,12 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+	requst:<span th:text="${#httpServletRequest.getAttribute('req')}"></span><br/>
+	session:<span th:text="${session.ses}"></span><br/>
+	application:<span th:text="${application.app}"></span>
+</body>
+</html>

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+	<table>
+		<tr>
+			<th>id</th>
+			<th>name</th>
+			<th>age</th>
+			<th>index</th>
+			<th>count</th>
+			<th>size</th>
+			<th>even</th>
+			<th>odd</th>
+			<th>first</th>
+			<th>last</th>
+		</tr>
+		<tr th:each="u, status : ${list}">
+			<td th:text="${u.userId}"></td>
+			<td th:text="${u.username}"></td>
+			<td th:text="${u.userage}"></td>
+			<td th:text="${status.index}"></td>
+			<td th:text="${status.count}"></td>
+			<td th:text="${status.size}"></td>
+			<td th:text="${status.even}"></td>
+			<td th:text="${status.odd}"></td>
+			<td th:text="${status.first}"></td>
+			<td th:text="${status.last}"></td>
+		</tr>
+	</table>
+</body>
+</html>
