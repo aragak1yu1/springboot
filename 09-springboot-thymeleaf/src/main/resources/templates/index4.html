@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+	<table>
+		<tr>
+			<th>id</th>
+			<th>name</th>
+			<th>age</th>
+		</tr>
+		<tr th:each="maps : ${map}">
+			<td th:each="u : ${maps}" th:text="${u.value.userId}"></td>
+			<td th:each="u : ${maps}" th:text="${u.value.username}"></td>
+			<td th:each="u : ${maps}" th:text="${u.value.userage}"></td>
+		</tr>
+	</table>
+</body>
+</html>

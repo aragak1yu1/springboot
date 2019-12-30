@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>thymeleaf url</title>
+</head>
+<body>
+	<!-- 注意语法 @{} -->
+	<a th:href="@{http://www.baidu.com}">绝对路径</a><br/>
+	<hr/>
+	<a th:href="@{/show}">相对路径</a><br/>
+	<a th:href="@{~/project/resourcesname}">相对服务器根路径</a>
+	<hr/>
+	<a th:href="@{/show(id=1,name=zhangsan)}">传值</a>
+	<hr/>
+	<a th:href="@{/path/{id}/show(id=1,name=zhangsan)}">resultful风格传参</a>
+</body>
+</html>

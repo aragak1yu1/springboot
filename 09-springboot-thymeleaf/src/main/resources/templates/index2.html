@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+	<span th:if="${sex}  == '男'">
+		性别男
+	</span>
+	<span th:if="${sex}  == '女'">
+		性别女
+	</span>
+	<hr/>
+	<div th:switch="${id}">
+		<span th:case="1">值是1</span>
+		<span th:case="2">值是2</span>
+	</div>
+	<hr/>
+	
+</body>
+</html>

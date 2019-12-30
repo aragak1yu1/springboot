@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>thymeleaf入门</title>
+</head>
+<body>
+	<span th:text="Hello"></span>
+	<hr/>
+	<span th:text="${msg}"></span>
+	<hr/>
+	<input type="text" name="username" th:value="${msg}"/>
+	<hr/>
+	strings内置对象<br/>
+	<span th:text="${#strings.isEmpty(msg)}"></span>
+	<!-- 空字符串也是true -->
+	<span th:text="${#strings.isEmpty(empryString)}"></span>
+	<hr/>
+	<span th:text="${#strings.contains(msg, 'thymeleaf')}"></span>
+	<hr/>
+	<span th:text="${#strings.startsWith(msg, 'm')}"></span>
+	<hr/>
+	<span th:text="${#strings.endsWith(msg, '例')}"></span>
+	<hr/>
+	<span th:text="${#strings.length(msg)}"></span>
+	<hr/>
+	<span th:text="${#strings.indexOf(msg, 'h')}"></span>
+	<hr/>
+	<span th:text="${#strings.substring(msg, 13)}"></span>
+	<span th:text="${#strings.substring(msg, 13, 14)}"></span>
+	<hr/>
+	<span th:text="${#strings.toUpperCase(msg)}"></span>
+	<span th:text="${#strings.toLowerCase(msg)}"></span>
+	<hr/>
+	dates内置对象<br/>
+	<span th:text="${#dates.format(key)}"></span><br/>
+	<span th:text="${#dates.format(key, 'yyyy-MM-dd')}"></span>
+	<hr/>
+	年:<span th:text="${#dates.year(key)}"></span><br/>
+	月:<span th:text="${#dates.month(key)}"></span><br/>
+	日:<span th:text="${#dates.day(key)}"></span>
+</body>
+</html>
